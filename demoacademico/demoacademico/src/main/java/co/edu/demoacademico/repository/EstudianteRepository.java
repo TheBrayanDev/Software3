@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+// Capa de Acceso a datos (Repository) — zona BD
 @Repository
 public interface EstudianteRepository extends JpaRepository<Estudiante, Long> {
 

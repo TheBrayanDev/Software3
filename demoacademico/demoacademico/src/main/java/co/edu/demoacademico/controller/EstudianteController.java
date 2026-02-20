@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// Capa de Presentación (Controller)
 @RestController
 @RequestMapping("/api/estudiantes")
 public class EstudianteController {
@@ -25,5 +26,11 @@ public class EstudianteController {
     @GetMapping
     public List<Estudiante> listar() {
         return service.listar();
+    }
+
+    @GetMapping("/buscar")
+    public Estudiante buscarPorEmail(@RequestParam String email) {
+        return service.buscarPorEmail(email)
+                .orElseThrow(() -> new IllegalStateException("Estudiante no encontrado"));
     }
 }

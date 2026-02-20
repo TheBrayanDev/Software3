@@ -1,11 +1,14 @@
 package co.edu.demoacademico.service;
 
+import co.edu.demoacademico.exception.EmailYaExisteException;
 import co.edu.demoacademico.model.Estudiante;
 import co.edu.demoacademico.repository.EstudianteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
+// Capa de Lógica (Service)
 @Service
 public class EstudianteService {
 
@@ -23,7 +26,7 @@ public class EstudianteService {
         // ----------------------------
         repository.findByEmail(estudiante.getEmail())
                 .ifPresent(e -> {
-                    throw new IllegalStateException("Email ya registrado");
+                    throw new EmailYaExisteException("Email ya registrado: " + e.getEmail());
                 });
 
         // ============================
@@ -39,5 +42,9 @@ public class EstudianteService {
         // Consulta vía Repository
         // ============================
         return repository.findAll();
+    }
+
+    public Optional<Estudiante> buscarPorEmail(String email) {
+        return repository.findByEmail(email);
     }
 }
