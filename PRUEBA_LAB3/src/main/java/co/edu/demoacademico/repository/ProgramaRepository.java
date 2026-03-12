@@ -1,12 +1,10 @@
 // ProgramaRepository.java
 package co.edu.demoacademico.repository;
 
-import co.edu.demoacademico.model.Programa;
-import org.springframework.data.jpa.repository.JpaRepository;
+// Moved to co.edu.demoacademico.programas.repository.ProgramaRepository
+@Deprecated
+public interface ProgramaRepository {}
 
-public interface ProgramaRepository extends JpaRepository<Programa, Long> {
-    boolean existsByCodigo(String codigo);
-}
 
 // AsignaturaRepository.java
 package co.edu.demoacademico.repository;

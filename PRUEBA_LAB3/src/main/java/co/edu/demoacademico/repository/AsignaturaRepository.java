@@ -1,6 +1,6 @@
 package co.edu.demoacademico.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+// Moved to co.edu.demoacademico.asignaturas.repository.AsignaturaRepository
+@Deprecated
+public interface AsignaturaRepository {}
 
-public interface AsignaturaRepository extends JpaRepository<Asignatura, Long> {
-}

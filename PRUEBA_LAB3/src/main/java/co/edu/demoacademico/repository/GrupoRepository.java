@@ -1,6 +1,6 @@
 package co.edu.demoacademico.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+// Moved to co.edu.demoacademico.grupos.repository.GrupoRepository
+@Deprecated
+public interface GrupoRepository {}
 
-public interface GrupoRepository extends JpaRepository<Grupo, Long> {
-}

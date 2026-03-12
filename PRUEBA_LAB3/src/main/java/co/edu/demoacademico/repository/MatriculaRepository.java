@@ -1,9 +1,6 @@
 package co.edu.demoacademico.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+// Moved to co.edu.demoacademico.matriculas.repository.MatriculaRepository
+@Deprecated
+public interface MatriculaRepository {}
 
-public interface MatriculaRepository extends JpaRepository<Matricula, Long> {
-    boolean existsByEstudianteIdAndGrupoId(Long estudianteId, Long grupoId);
-
-    long countByGrupoId(Long grupoId);
-}
