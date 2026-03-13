@@ -2,6 +2,8 @@ package co.edu.demoacademico.grupos;
 
 import co.edu.demoacademico.common.exception.NotFoundException;
 import co.edu.demoacademico.grupos.port.GrupoQueryPort;
+import co.edu.demoacademico.grupos.Grupo;
+import co.edu.demoacademico.grupos.GrupoRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -18,16 +20,24 @@ public class GrupoServiceImpl implements GrupoService, GrupoQueryPort {
     }
 
     @Override
-    public Grupo crear(Grupo g) {
-        return repo.save(g);
-    }
-
-    @Override
     @Transactional(readOnly = true)
     public Grupo obtenerPorId(Long id) {
         return repo.findById(id)
                 .orElseThrow(() -> new NotFoundException("Grupo no encontrado: " + id));
     }
+
+
+    @Override
+    public Grupo crear(Grupo g) {
+        return repo.save(g);
+    }
+
+    //@Override
+    //@Transactional(readOnly = true)
+    //public Grupo obtenerPorId(Long id) {
+    //    return repo.findById(id)
+    //            .orElseThrow(() -> new NotFoundException("Grupo no encontrado: " + id));
+    //}
 
     @Override
     @Transactional(readOnly = true)

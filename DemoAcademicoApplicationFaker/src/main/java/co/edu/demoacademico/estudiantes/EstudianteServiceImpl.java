@@ -2,7 +2,9 @@ package co.edu.demoacademico.estudiantes;
 
 import co.edu.demoacademico.common.exception.BusinessException;
 import co.edu.demoacademico.common.exception.NotFoundException;
+import co.edu.demoacademico.estudiantes.Estudiante;
 import co.edu.demoacademico.estudiantes.port.EstudianteQueryPort;
+import co.edu.demoacademico.estudiantes.EstudianteRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -19,6 +21,13 @@ public class EstudianteServiceImpl implements EstudianteService, EstudianteQuery
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public Estudiante obtenerPorId(Long id) {
+        return repo.findById(id)
+                .orElseThrow(() -> new NotFoundException("Estudiante no encontrado: " + id));
+    }
+
+    @Override
     public Estudiante crear(Estudiante e) {
         if (repo.existsByEmail(e.getEmail())) {
             throw new BusinessException("Ya existe un estudiante con ese email");
@@ -26,12 +35,12 @@ public class EstudianteServiceImpl implements EstudianteService, EstudianteQuery
         return repo.save(e);
     }
 
-    @Override
-    @Transactional(readOnly = true)
-    public Estudiante obtenerPorId(Long id) {
-        return repo.findById(id)
-                .orElseThrow(() -> new NotFoundException("Estudiante no encontrado: " + id));
-    }
+    //@Override
+    //@Transactional(readOnly = true)
+    //public Estudiante obtenerPorId(Long id) {
+    //    return repo.findById(id)
+    //            .orElseThrow(() -> new NotFoundException("Estudiante no encontrado: " + id));
+    //}
 
     @Override
     @Transactional(readOnly = true)
