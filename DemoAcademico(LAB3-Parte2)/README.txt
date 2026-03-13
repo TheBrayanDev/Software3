@@ -1,5 +1,6 @@
 ## Cómo ejecutar
-    Desde src>main>java>DemoAcademicoApplication se ejecuta la aplicación
+    cd DemoAcademico(LAB3-Parte2)
+    ./mvnw spring-boot:run
 
 ## URL Swagger y H2
     Swagger URL: http://localhost:8080/swagger-ui/index.html#/
