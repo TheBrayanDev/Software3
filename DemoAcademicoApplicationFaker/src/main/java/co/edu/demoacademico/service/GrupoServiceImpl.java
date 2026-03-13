@@ -1,6 +1,6 @@
 package co.edu.demoacademico.service;
 
-import co.edu.demoacademico.common.exception.NotFoundException;
+import co.edu.demoacademico.exception.NotFoundException;
 import co.edu.demoacademico.model.Grupo;
 import co.edu.demoacademico.repository.GrupoRepository;
 import org.springframework.data.domain.Page;

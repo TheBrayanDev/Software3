@@ -1,4 +1,4 @@
-package co.edu.demoacademico.common.exception;
+package co.edu.demoacademico.exception;
 
 public class BusinessException extends RuntimeException {
     public BusinessException(String message) {

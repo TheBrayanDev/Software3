@@ -1,7 +1,7 @@
-package co.edu.demoacademico.common.controller;
+package co.edu.demoacademico.controller;
 
-import co.edu.demoacademico.common.api.ApiResponse;
-import co.edu.demoacademico.common.api.ResponseBuilder;
+import co.edu.demoacademico.api.ApiResponse;
+import co.edu.demoacademico.api.ResponseBuilder;
 import co.edu.demoacademico.dto.MatriculaCreateDTO;
 import co.edu.demoacademico.dto.MatriculaDTO;
 import co.edu.demoacademico.handler.MatriculaHandler;

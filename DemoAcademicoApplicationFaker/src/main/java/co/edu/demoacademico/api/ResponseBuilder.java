@@ -1,4 +1,4 @@
-package co.edu.demoacademico.common.api;
+package co.edu.demoacademico.api;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

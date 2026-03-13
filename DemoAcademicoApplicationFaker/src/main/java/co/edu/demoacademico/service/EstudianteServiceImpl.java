@@ -1,7 +1,7 @@
 package co.edu.demoacademico.service;
 
-import co.edu.demoacademico.common.exception.BusinessException;
-import co.edu.demoacademico.common.exception.NotFoundException;
+import co.edu.demoacademico.exception.BusinessException;
+import co.edu.demoacademico.exception.NotFoundException;
 import co.edu.demoacademico.model.Estudiante;
 import co.edu.demoacademico.repository.EstudianteRepository;
 import org.springframework.data.domain.Page;

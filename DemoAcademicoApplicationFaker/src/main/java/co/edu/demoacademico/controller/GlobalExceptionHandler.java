@@ -1,9 +1,9 @@
-package co.edu.demoacademico.common.controller;
+package co.edu.demoacademico.controller;
 
-import co.edu.demoacademico.common.api.ApiResponse;
-import co.edu.demoacademico.common.api.ResponseBuilder;
-import co.edu.demoacademico.common.exception.BusinessException;
-import co.edu.demoacademico.common.exception.NotFoundException;
+import co.edu.demoacademico.api.ApiResponse;
+import co.edu.demoacademico.api.ResponseBuilder;
+import co.edu.demoacademico.exception.BusinessException;
+import co.edu.demoacademico.exception.NotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

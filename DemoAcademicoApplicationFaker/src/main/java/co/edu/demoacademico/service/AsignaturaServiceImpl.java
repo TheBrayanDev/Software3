@@ -1,6 +1,6 @@
 package co.edu.demoacademico.service;
 
-import co.edu.demoacademico.common.exception.NotFoundException;
+import co.edu.demoacademico.exception.NotFoundException;
 import co.edu.demoacademico.model.Asignatura;
 import co.edu.demoacademico.repository.AsignaturaRepository;
 import org.springframework.stereotype.Service;
