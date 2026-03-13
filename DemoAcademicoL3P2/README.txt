@@ -1,5 +1,5 @@
 ## Cómo ejecutar
-    cd DemoAcademico(LAB3-Parte2)
+    cd DemoAcademicoL3P2)
     ./mvnw spring-boot:run
 
 ## URL Swagger y H2
