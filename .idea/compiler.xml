@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo-academicoL3" />
+        <module name="demo-academicoL3P1" />
         <module name="demo-academico (2)" />
         <module name="demo-academico" />
       </profile>
@@ -17,6 +19,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo-academicoL3" options="-parameters" />
+      <module name="demo-academicoL3P1" options="-parameters" />
       <module name="demo-academico" options="-parameters" />
       <module name="demo-academico (1)" options="-parameters" />
       <module name="demo-academico (2)" options="-parameters" />
